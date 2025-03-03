@@ -8,6 +8,9 @@ Keybindings may be configured in BepInEx\config\plugins.keybindings.cfg
 
 # Usage
 Configure BepInEx\config\plugins.keybindings.cfg
+Keyboard controls use this pattern: <Keyboard>/a
+Mouse controls use this pattern: <Mouse>/leftButton
+All mouse controls are logged to BepInEx console.
 Default entries:
 - moveForwardAction - <Keyboard>/w
 - moveBackwardAction - <Keyboard>/s

@@ -38,10 +38,16 @@ public class PatchClientChat
             bindings["randomizeInputsAction"] = __instance.randomizeInputsAction;
 
             // useful :)
+            Plugin.Log.LogInfo($"Default action controls:");
             foreach (var kvp in bindings){ 
                 foreach(var binding in kvp.Value.bindings.ToArray()){
                     Plugin.Log.LogInfo($"{kvp.Key} - {binding.path}");
                 }
+            }
+            Plugin.Log.LogInfo($"Possible <mouse>/* controls:");
+            var controls = InputSystem.FindControls("<mouse>/*");
+            foreach(var binding in controls.ToArray()){
+                Plugin.Log.LogInfo($"Found <mouse>/{binding.name} controls");
             }
 
             foreach (var kvp in Plugin.bindings_from_config){ // bruh I hate c#. Why can't I unpack key-value-pairs? literally spent 30 mins googling for it :(
